@@ -28,6 +28,6 @@ public class Ex04
 		System.out.println("수고 하셨습니다.");
 			
 		
-		
+		//
 	}
 }

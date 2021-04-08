@@ -79,6 +79,7 @@ public class Ex08
 			try 
 			{
 				bis.close();
+				fis.close();
 			} catch (IOException e) 
 			{
 				// TODO Auto-generated catch block

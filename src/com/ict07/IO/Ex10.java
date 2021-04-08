@@ -1,17 +1,17 @@
-package com.ict0.test;
+package com.ict07.IO;
 
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class study01 
+public class Ex10 
 {
-	// C:/study/util 에 study00.txt파일의 내용을 읽어 오자
 	public static void main(String[] args) 
 	{
-		String pathname = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"study00.txt";
+		// C:\\study\\util\\test100.txt 파일안에 
+		// 내용을 읽는 파일을 작성하시오.
+		String pathname = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"test100.txt";
 		File file = new File(pathname);
 		FileInputStream fis = null;
 		BufferedInputStream bis = null;
@@ -23,8 +23,8 @@ public class study01
 			
 			byte[] b = new byte[(int)(file.length())];
 			bis.read(b);
-			String str = new String(b);
-			System.out.println(str);
+			String msg = new String(b);
+			System.out.println(msg);
 			
 			
 		} catch (Exception e) 
@@ -41,11 +41,10 @@ public class study01
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
 		}
 		
 		
 		
 	}
-	
-	
 }

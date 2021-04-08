@@ -1,16 +1,19 @@
-package com.ict0.test;
+package com.ict07.IO;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class study00 
+public class Ex09 
 {
-	// C:/study/util 에 study00.txt파일 만들고 이름, 나이, 전화번호 입력
 	public static void main(String[] args) 
 	{
-		String pathname = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"study00.txt";
+		// C:\\study\\util\\test100.txt 파일안에
+		// 이름 : 000
+		// 나이 : 00
+		// 전화번호 : 000-0000-0000를 작성하는 코딩을 하시오.
+		String pathname = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"test100.txt";
 		File file = new File(pathname);
 		FileOutputStream fos = null;
 		BufferedOutputStream bos = null;
@@ -20,16 +23,15 @@ public class study00
 			fos = new FileOutputStream(file);
 			bos = new BufferedOutputStream(fos);
 			
-			
-			String str = "이름 : 최현규\r나이 : 25\r번호 : 010-4181-1836";
+			String str = "이름 : 최현규\r나이 : 25\r전화번호 : 010-4181-1836";
 			byte[] b = str.getBytes();
 			bos.write(b);
 			bos.flush();
 			
-		} catch (IOException e) 
+			
+		} catch (Exception e) 
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// TODO: handle exception
 		}finally
 		{
 			try 
@@ -45,11 +47,5 @@ public class study00
 		
 		
 		
-		
 	}
-	
-	
-	
-	
-	
 }

@@ -17,7 +17,7 @@ public class Ex01
 	// 만들고자 하는 디렉터리의 상위디렉터리가 존재하지 않는 경우 생성 불가 => mkdir()
 	// ex) c:\base\want => want디렉터리를 만들때 base디렉터리가 없는 경우 생성 불가
 	// 상위 디렉터리인 base와 want디렉터리 까지 만들어준다. => mkdirs()
-	// - delete() : 파일 디렉터리 삭제
+	// - delete() : 파일, 디렉터리 삭제
 	// - isDirectory() : boolean => 디렉터리이면 true, 아니면 false
 	// - isFile() : boolean => 파일이면 true, 아니면 flase
 	// **저장측면에서 computer에는 file과 directory만 존재한다.

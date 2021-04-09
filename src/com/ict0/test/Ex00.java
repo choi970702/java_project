@@ -12,7 +12,7 @@ public class Ex00 {
 		String[][] res = new String[2][5];
 		
 		res[0] = course;
-		res[1] = String
+		res[1] = String;
 		
 		for (int i = 0; i < res.length; i++) 
 		{

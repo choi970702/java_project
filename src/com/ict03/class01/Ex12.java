@@ -8,6 +8,10 @@ public class Ex12 {
 	private int rank = 1;
 
 	// »ý¼ºÀÚ
+	public Ex12() 
+	{
+		// TODO Auto-generated constructor stub
+	}
 	public Ex12(String name, int kor, int eng, int math)
 	{
 		this.name = name;

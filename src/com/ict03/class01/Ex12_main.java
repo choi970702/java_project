@@ -22,7 +22,7 @@ public class Ex12_main
 			System.out.print("수학 : ");
 			int math = scan.nextInt();
 
-			Ex12 person = new Ex12();
+			Ex12 person = new Ex12(name, kor, eng, math);
 			person.setName(name);
 			//person.p_sum(kor, eng, math);
 			// person.p_avg();
@@ -47,7 +47,7 @@ public class Ex12_main
 
 		// 정렬
 		// 자리를 변경하기위한 임시저장 배열
-		Ex12[] tmp = new Ex12();
+		Ex12 tmp = new Ex12();
 		for (int i = 0; i < arr.length - 1; i++) 
 		{
 			for (int j = i + 1; j < arr.length; j++) 

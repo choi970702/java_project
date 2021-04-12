@@ -1,6 +1,10 @@
 package com.ict0.test;
 
-import java.util.Scanner;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 public class study 
 {
@@ -11,7 +15,53 @@ public class study
 	
 	public static void main(String[] args) 
 	{
-		Scanner sacn = new Scanner(System.in);
+		// 복사할 파일의 위치와 이름
+		String pathname1 = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"ict06.txt";
+		File file1 = new File(pathname1);
+		
+		// 붙이기할 위치
+		String pathname2 = "C:"+File.separator+"study"+File.separator+"util"+File.separator+"study00.txt";
+		File file2 = new File(pathname2);
+		
+		FileInputStream fis = null;
+		BufferedInputStream bis = null;
+		
+		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+		
+		try 
+		{
+			fis = new FileInputStream(file1);
+			bis = new BufferedInputStream(fis);
+			
+			fos = new FileOutputStream(file2);
+			bos = new BufferedOutputStream(fos);
+			
+			byte[] b1 = new byte[(int)(file1.length())];
+			bis.read(b1);
+			String str = new String(b1);
+			
+			byte[] b2 = str.getBytes();
+			bos.write(b2);
+			
+			bos.flush();
+			
+		} catch (Exception e) 
+		{
+			System.out.println(e);
+		}finally
+		{
+			try 
+			{
+				bos.close();
+				fos.close();
+				bis.close();
+				fis.close();
+			} catch (Exception e2) 
+			{
+				System.out.println(e2);
+			}
+		}
 		
 		
 		

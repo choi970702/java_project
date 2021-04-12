@@ -18,7 +18,7 @@ public class Ex02
 		InputStreamReader isr = null;
 		BufferedReader br = null;
 		
-		String pathname = "C:"+File.pathSeparator+"study"+File.separator+"util"+File.separator+"기상청.txt";
+		String pathname ="c:"+File.separator+"study"+File.separator+"util"+File.separator+"기상청.txt";
 		File file = new File(pathname);
 		
 		FileWriter fw = null;
@@ -40,7 +40,7 @@ public class Ex02
 				sb.append(msg+"\n");
 			}
 			
-			// System.out.println(sb.toString());
+			 System.out.println(sb.toString());
 			 fw = new FileWriter(file);
 			 bw = new BufferedWriter(fw);
 			 

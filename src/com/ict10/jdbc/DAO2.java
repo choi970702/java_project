@@ -38,7 +38,7 @@ public class DAO2
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (Exception e) 
 		{
-			System.out.println(e);
+			System.out.println("1"+e);
 		}
 		return conn;
 	}
@@ -49,6 +49,7 @@ public class DAO2
 	{
 		try 
 		{
+			conn = getConnection();
 			String sql = "select * from book order by bookid";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
@@ -62,7 +63,7 @@ public class DAO2
 			}
 		} catch (Exception e) 
 		{
-			System.out.println(e);
+			System.out.println("2"+e);
 		}finally
 		{
 			try 
@@ -82,6 +83,7 @@ public class DAO2
 	{
 		try 
 		{
+			conn = getConnection();
 			String sql = "insert into book values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1,i_bookid);
@@ -114,6 +116,7 @@ public class DAO2
 	{
 		try 
 		{
+			conn = getConnection();
 			String sql = "delete from book where bookid = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1,delete_id);
@@ -141,6 +144,7 @@ public class DAO2
 	{
 		try 
 		{
+			conn = getConnection();
 			String sql = "update book set bookname = ?, publisher = ?, price = ? where bookid = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, u_bookname);
@@ -174,6 +178,7 @@ public class DAO2
 	{
 		try 
 		{
+			conn = getConnection();
 			String sql = "select * from book where bookid = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, select_id);
